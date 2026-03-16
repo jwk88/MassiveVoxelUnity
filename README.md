@@ -1,4 +1,4 @@
 Optimized voxel rendering algorithms for Unity, capable of very large meshes.
 
-![screenshot](Assets/preview.png)
+<video src="Assets/preview_video.mov" controls></video>
 ![screenshot](Assets/inspector.png)

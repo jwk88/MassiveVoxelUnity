@@ -227,8 +227,8 @@ MonoBehaviour:
   _noise: {fileID: 614532598}
   _material: {fileID: 2100000, guid: 74117f645ca87544896e430b75e9a316, type: 2}
   _config:
-    Width: 32
-    Length: 32
+    Width: 64
+    Length: 64
     ChunkWidth: 16
     ChunkHeight: 64
     ChunkLength: 16
@@ -411,6 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880274289}
   - component: {fileID: 1880274288}
+  - component: {fileID: 1880274290}
   m_Layer: 0
   m_Name: FreeCamera
   m_TagString: Untagged
@@ -453,6 +454,18 @@ Transform:
   - {fileID: 2034881314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
+--- !u!114 &1880274290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880274287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66d5c4f43fd543d5b0d97f824095cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FPSCounter
 --- !u!1 &1957928319
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +580,6 @@ GameObject:
   - component: {fileID: 2034881313}
   - component: {fileID: 2034881312}
   - component: {fileID: 2034881311}
-  - component: {fileID: 2034881315}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -694,18 +706,6 @@ Transform:
   - {fileID: 1957928320}
   m_Father: {fileID: 1880274289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2034881315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034881310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48de7b5638154124864f52c009a15f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

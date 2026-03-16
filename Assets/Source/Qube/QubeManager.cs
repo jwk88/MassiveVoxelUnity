@@ -20,6 +20,7 @@ namespace RideTools.Qube
         QubeRenderer[] _renderers;
         QubeRuntime _runtime;
         GUIStyle _style = new GUIStyle();
+        private float deltaTime = 0.0f;
 
         void OnValidate()
         {
@@ -92,6 +93,8 @@ namespace RideTools.Qube
 
                 _runtime.HeightRange = new Vector2Int(_config.HeightNoiseMin, _config.HeightNoiseMax);
             }
+
+            deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
         }
 
         void ApplyMeshes()
@@ -129,9 +132,21 @@ namespace RideTools.Qube
             Task.WaitAll(tasks);
         }
 
+        private string FormatCount(int count)
+        {
+            if (count >= 1000000)
+                return (count / 1000000f).ToString("0.0") + "M";
+            else if (count >= 1000)
+                return (count / 1000f).ToString("0") + "K";
+            else
+                return count.ToString();
+        }
+
         void OnGUI()
         {
-            GUI.Label(new Rect(10, 10, 100, 20), "Visible Cubes: " + QubeMesh.VisibleCubes, _style);
+            GUI.Label(new Rect(10, 10, 100, 20), "Constructed Cubes: " + FormatCount(QubeMesh.VisibleCubes), _style);
+            float fps = 1.0f / deltaTime;
+            GUI.Label(new Rect(Screen.width - 150, 10, 150, 20), string.Format("{0:0.} fps", fps), _style);
         }
 
         unsafe void Flush()
