@@ -36,7 +36,7 @@ namespace RideTools.Qube
 
         unsafe void Awake()
         {
-            _style.fontSize = 48;
+            _style.fontSize = 24;
             _style.normal.textColor = Color.white;
 
             _prototype = new GameObject("Qube Renderer").AddComponent<QubeRenderer>();
